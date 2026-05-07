@@ -1,0 +1,43 @@
+[Thu May  7 01:33:54 2026] PHP 8.3.6 Development Server (http://127.0.0.1:8000) started
+[Thu May  7 01:34:22 2026] 127.0.0.1:58418 Accepted
+[Thu May  7 01:34:23 2026] 127.0.0.1:58418 [302]: HEAD /admin
+[Thu May  7 01:34:23 2026] 127.0.0.1:58418 Closing
+[Thu May  7 01:34:46 2026] 127.0.0.1:59126 Accepted
+[Thu May  7 01:34:47 2026] 127.0.0.1:59126 [500]: HEAD /admin/product
+[Thu May  7 01:34:47 2026] 127.0.0.1:59126 Closing
+[Thu May  7 01:36:35 2026] 127.0.0.1:33264 Accepted
+[Thu May  7 01:36:35 2026] 127.0.0.1:33264 [302]: HEAD /admin
+[Thu May  7 01:36:35 2026] 127.0.0.1:33264 Closing
+[Thu May  7 01:37:00 2026] 127.0.0.1:46918 Accepted
+[Thu May  7 01:37:00 2026] 127.0.0.1:46918 [500]: GET /admin/product
+[Thu May  7 01:37:00 2026] 127.0.0.1:46918 Closing
+[Thu May  7 01:37:24 2026] 127.0.0.1:40078 Accepted
+[Thu May  7 01:37:25 2026] 127.0.0.1:40078 [500]: GET /admin/product
+[Thu May  7 01:37:25 2026] 127.0.0.1:40078 Closing
+[Thu May  7 01:40:52 2026] 127.0.0.1:60002 Accepted
+[Thu May  7 01:40:52 2026] 127.0.0.1:60002 [200]: GET /admin/product
+[Thu May  7 01:40:52 2026] 127.0.0.1:60002 Closing
+[Thu May  7 01:41:17 2026] 127.0.0.1:35342 Accepted
+[Thu May  7 01:41:17 2026] 127.0.0.1:35342 [302]: GET /admin?crudAction=new&crudControllerFqcn=App%5CController%5CAdmin%5CCurrencyCrudController
+[Thu May  7 01:41:17 2026] 127.0.0.1:35342 Closing
+[Thu May  7 01:47:06 2026] 127.0.0.1:36760 Accepted
+[Thu May  7 01:47:06 2026] 127.0.0.1:36760 [302]: GET /admin?crudAction=index&crudControllerFqcn=App%5CController%5CAdmin%5CProductCrudController
+[Thu May  7 01:47:06 2026] 127.0.0.1:36760 Closing
+[Thu May  7 01:47:52 2026] 127.0.0.1:41480 Accepted
+[Thu May  7 01:47:52 2026] 127.0.0.1:41480 [302]: GET /admin?crudAction=index&crudControllerFqcn=App%5CController%5CAdmin%5CProductCrudController
+[Thu May  7 01:47:52 2026] 127.0.0.1:41480 Closing
+[Thu May  7 01:49:57 2026] 127.0.0.1:33954 Accepted
+[Thu May  7 01:49:57 2026] 127.0.0.1:33954 [302]: GET /admin
+[Thu May  7 01:49:57 2026] 127.0.0.1:33954 Closing
+[Thu May  7 01:49:57 2026] 127.0.0.1:33960 Accepted
+[Thu May  7 01:49:58 2026] 127.0.0.1:33960 [200]: GET /admin/product
+[Thu May  7 01:49:58 2026] 127.0.0.1:33960 Closing
+[Thu May  7 01:50:21 2026] 127.0.0.1:41524 Accepted
+[Thu May  7 01:50:21 2026] 127.0.0.1:41524 [302]: GET /admin
+[Thu May  7 01:50:21 2026] 127.0.0.1:41524 Closing
+[Thu May  7 01:50:21 2026] 127.0.0.1:41540 Accepted
+[Thu May  7 01:50:21 2026] 127.0.0.1:41540 [200]: GET /admin/product
+[Thu May  7 01:50:21 2026] 127.0.0.1:41540 Closing
+[Thu May  7 01:55:29 2026] 127.0.0.1:36248 Accepted
+[Thu May  7 01:55:29 2026] 127.0.0.1:36248 [302]: HEAD /admin
+[Thu May  7 01:55:29 2026] 127.0.0.1:36248 Closing
