@@ -2,21 +2,30 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Metadata\ApiResource;
 use App\Repository\CurrencyRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: CurrencyRepository::class)]
+#[ApiResource(
+    normalizationContext: ['groups' => ['currency:read']],
+    denormalizationContext: ['groups' => ['currency:write']]
+)]
 class Currency
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
+    #[Groups(['currency:read'])]
     private ?int $id = null;
 
     #[ORM\Column(length: 3)]
+    #[Groups(['currency:read', 'currency:write'])]
     private ?string $code = null;
 
     #[ORM\Column]
+    #[Groups(['currency:read', 'currency:write'])]
     private ?float $exchangeRate = null;
 
     public function getId(): ?int

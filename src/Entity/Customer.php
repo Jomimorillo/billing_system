@@ -2,24 +2,34 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Metadata\ApiResource;
 use App\Repository\CustomerRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: CustomerRepository::class)]
+#[ApiResource(
+    normalizationContext: ['groups' => ['customer:read']],
+    denormalizationContext: ['groups' => ['customer:write']]
+)]
 class Customer
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
+    #[Groups(['customer:read', 'invoice:read'])]
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    #[Groups(['customer:read', 'customer:write', 'invoice:read'])]
     private ?string $name = null;
 
     #[ORM\Column(length: 255, nullable: true)]
+    #[Groups(['customer:read', 'customer:write'])]
     private ?string $email = null;
 
     #[ORM\Column(length: 50, nullable: true)]
+    #[Groups(['customer:read', 'customer:write'])]
     private ?string $phone = null;
 
     public function getId(): ?int

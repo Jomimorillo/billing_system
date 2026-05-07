@@ -2,29 +2,40 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Metadata\ApiResource;
 use App\Repository\InvoiceItemRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: InvoiceItemRepository::class)]
+#[ApiResource(
+    normalizationContext: ['groups' => ['invoice_item:read']],
+    denormalizationContext: ['groups' => ['invoice_item:write']]
+)]
 class InvoiceItem
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
+    #[Groups(['invoice_item:read', 'invoice:read'])]
     private ?int $id = null;
 
     #[ORM\ManyToOne(targetEntity: Invoice::class, inversedBy: 'items')]
     #[ORM\JoinColumn(nullable: false)]
+    #[Groups(['invoice_item:read', 'invoice_item:write'])]
     private ?Invoice $invoice = null;
 
     #[ORM\ManyToOne(targetEntity: Product::class)]
     #[ORM\JoinColumn(nullable: false)]
+    #[Groups(['invoice_item:read', 'invoice_item:write', 'invoice:read', 'invoice:write'])]
     private ?Product $product = null;
 
     #[ORM\Column]
+    #[Groups(['invoice_item:read', 'invoice_item:write', 'invoice:read', 'invoice:write'])]
     private ?int $quantity = null;
 
     #[ORM\Column]
+    #[Groups(['invoice_item:read', 'invoice_item:write', 'invoice:read', 'invoice:write'])]
     private ?float $unitPriceVES = null;
 
     public function getId(): ?int
